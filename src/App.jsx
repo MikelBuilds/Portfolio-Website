@@ -1,18 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import Headers from "./components/Headers";
+import Hero from "./components/Hero";
+import MyProjects from "./components/MyProjects";
+import ContactMe from "./components/ContactMe";
+import Footer from "./components/Footer";
+import ParticleBackground from "./components/ParticleBackground";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <h1 className='bg-red-400'>
-        HI 
-      </h1>
+      <ParticleBackground />
+      <Headers />
+      <Hero />
+      <MyProjects />
+      <ContactMe />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
