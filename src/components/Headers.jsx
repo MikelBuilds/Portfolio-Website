@@ -13,28 +13,6 @@ export default function Header() {
         Mikel Fernandes
       </h1>
 
-      {/* Hamburger icon */}
-      {/* <button
-        className="flex flex-col space-y-1.5 focus:outline-none cursor-pointer"
-        onClick={() => setOpen(true)}
-      >
-        <span
-          className={`block w-7 h-0.5 transition-colors duration-200 ${
-            open ? "bg-white" : "bg-black"
-          }`}
-        ></span>
-        <span
-          className={`block w-7 h-0.5 transition-colors duration-200 ${
-            open ? "bg-white" : "bg-black"
-          }`}
-        ></span>
-        <span
-          className={`block w-7 h-0.5 transition-colors duration-200 ${
-            open ? "bg-white" : "bg-black"
-          }`}
-        ></span>
-      </button> */}
-
       <button  onClick={() => setOpen(true)}>
       <span className="material-symbols-outlined cursor-pointer">menu</span>
 
