@@ -23,13 +23,16 @@ const ContactMe = () => {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch(process.env.CONTACT_FORM_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        `https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_KEY}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (response.ok) {
         setSubmitStatus("success");
@@ -38,6 +41,7 @@ const ContactMe = () => {
         setSubmitStatus("error");
       }
     } catch (error) {
+      console.error("Form submission error:", error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
