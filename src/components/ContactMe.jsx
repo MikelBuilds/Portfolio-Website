@@ -23,7 +23,7 @@ const ContactMe = () => {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch("https://formspree.io/f/xpwjgava", {
+      const response = await fetch(process.env.CONTACT_FORM_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
